@@ -1,0 +1,34 @@
+body{
+    margin: 0 auto;
+	position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background:#a9a9a9;
+}
+
+#elem{
+	position: absolute;
+	width: 200px;
+    height: 200px;
+    background: #8b008b; /* Старые браузеры */
+    background: radial-gradient(#ff00ff, #8b008b);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.level{
+    display: flex;
+    justify-content: space-between;
+}
+
+.level > div{
+    padding: 5px 10px;
+    background: #696969;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.level > div >span{
+    padding-left: 5px;
+    color: #ff1493;
+}

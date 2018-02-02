@@ -28,7 +28,7 @@ var step = 0;
 var id = setInterval(frame, 10);
 function frame(){
 	if (step >= 80){
-		clearInterval(id);
+		step = 0;
 
 	} else{
 		step++;
