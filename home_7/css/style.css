@@ -29,6 +29,5 @@ body{
     border-radius: 50%;
     position: absolute;
     background: #ff1493;
-    top: 0;
     z-index: 1;
 }
