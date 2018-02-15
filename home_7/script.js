@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {	
-	var ball = document.getElementsByClassName("ball");	
+	let ball = document.getElementsByClassName("ball");	
 	ball[0].style.left = 50 + "px";	
 	ball[1].style.left = screen.availWidth/2 - 50 + 'px';
 	ball[2].style.left = screen.availWidth/4 - 50 + 'px';
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	ball[5].style.top = "0";
 	(function moveBall(){
 		let i = 0;	
-		let stepTop = 1;
+		let stepTop = 2;
 		let start = setInterval (function (){
 			if(ball[i].style.top == screen.availHeight + 'px'){				
 				i++;
@@ -27,8 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
 				ball[i].style.top = parseInt(ball[i].style.top.slice(0, -2)) + stepTop + 'px'
 			}	
 		},1);
+		console.log(ball[i].getBoundingClientRect().top);
+		if(ball[i].getBoundingClientRect().top == elem){}
 	}());
-	var elem = document.getElementById("cube");
+	let elem = document.getElementById("cube");
 	elem.style.bottom = "0";
 	elem.style.left = screen.availWidth / 2 - 75 + "px";
 	document.addEventListener('mousemove', function(e){
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			elem.style.left = e.pageX - elem.offsetWidth/2 + 'px';		  	  	
 		}
 		document.addEventListener('mousemove', function(e){
-		moveAt(e);
+			moveAt(e);
 		}, false);
 	}, false);
 });
