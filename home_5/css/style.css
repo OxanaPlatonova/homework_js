@@ -1,0 +1,22 @@
+body{
+	position: relative;
+	min-height: 500px;
+    overflow: hidden;
+}
+
+div{
+	color: white;
+	position: absolute;
+	width: 200px;
+    height: 200px;
+    background: #f595f2; /* Старые браузеры */
+    background: radial-gradient(#f595f2, #630d60);
+    animation: rotation 2s linear 0s infinite alternate;
+}
+
+@keyframes rotation{
+    0%{transform: rotateZ(45deg);}
+    25%{transform: rotateZ(90deg);}
+    50%{transform: rotateZ(180deg);}
+    100%{transform: rotateZ(360deg);}
+}
